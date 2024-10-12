@@ -1,3 +1,42 @@
+# Project Summary
+
+**MERN-STACK APP ReactJs/ExpressJs Project**: This project shows how to make a Full Stack Javascript application with a Graphical User Interface with ReactJs as a client and an API server in ExpressJs and a data repository in MongoDB
+
+# Project Objectives
+
+The project follows **three learning objectives** :
+
+1. How to create functional CRUD components in a ReactJs Client
+2. How to communicate data and functions between components and APIs Routes
+3. How to create a Functional API Server in ExpressJs
+ 
+# Requirements
+
+Have knowledge of Javascript, Html and CSS
+
+# Technical Requirements
+
+- Node Js
+- Express Js Installed
+- ReactJs Installed
+
+# Preview
+
+### Initial Main Screen Component
+
+![image](pantalla1.png)
+
+### Add Screen Component
+![image](pantalla3.png)
+
+### Edit Screen Component
+![image](pantalla2.png)
+
+### Delete Screen Component
+![image](pantalla5.png)
+
+***
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
