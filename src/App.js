@@ -16,10 +16,7 @@ function App() {
             </a>
             <a className="navbar-item" href="/addUser">
               Add User
-            </a>
-            <a className="navbar-item" href="/editUser">
-              Edit User
-            </a>
+            </a>            
           </div>  
         </div>  
       </nav>
@@ -30,7 +27,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ListaUsuarios/>} exact></Route>
           <Route path='/adduser' element={<AgregarUsuario/>} exact ></Route>
-          <Route path='/edituser' element={<EditarUsuario/>} exact></Route>
+          <Route path='/edituser/:idusuario' element={<EditarUsuario/>} exact></Route>
         </Routes>        
       </BrowserRouter>
 

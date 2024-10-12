@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default function ListaUsuarios() {
@@ -18,7 +19,7 @@ export default function ListaUsuarios() {
     }, []);
 
     const eliminarUsuario = (idusuario) => {
-      axios.delete(`/api/usuario/eliminarusuario/${idusuario}`)
+      axios.delete(`http://localhost:5000/api/usuario/eliminarusuario/${idusuario}`)
       .then(res => {
           alert(res.data);
           setUsuarios(usuarios.filter(usuario => usuario.idusuario !== idusuario));
@@ -27,12 +28,7 @@ export default function ListaUsuarios() {
           console.log(err);
       });
     };
-
-    const editarUsuario = (idusuario) => {
-      // Aquí iría la lógica para editar un usuario
-      console.log("Editando usuario con ID:", idusuario);
-    };
-    
+   
     if (loading) {
         return <div>Cargando...</div>;
     }
@@ -56,7 +52,8 @@ export default function ListaUsuarios() {
                             <td>{usuario.email}</td>
                             <td>{usuario.telefono}</td>
                             <td>
-                                <button onClick={() => editarUsuario(usuario.idusuario)} className="button is-small is-info">Editar</button>
+                                <Link to={`/edituser/${usuario.idusuario}`}><button className="button is-small is-info">Editar</button></Link>
+                                
                                 <button onClick={() => eliminarUsuario(usuario.idusuario)} className="button is-small is-danger">Eliminar</button>
                             </td>
                         </tr>
